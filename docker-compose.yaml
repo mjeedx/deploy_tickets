@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    app:
+        image: mjeedx/ticketserver:latest
+        volumes:
+          - /var/www/ticketserver.ua:/var/www/ticketserver.ua
+          - /srv/ticketserver/db:/srv/ticketserver/db
+        ports:
+          - "80:80"
+          - "8000:8000"
+        env_file: .env
+
+
+#    nginx:
+#        build: ./nginx
+#        volumes:
+#          - /var/www/ticketserver.ua/static:/var/www/ticketserver.ua/static
+#        ports:
+#          - "80:80"
