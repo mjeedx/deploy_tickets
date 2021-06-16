@@ -5,12 +5,12 @@ services:
         image: mjeedx/ticketserver:latest
         volumes:
           - /var/www/ticketserver.ua:/var/www/ticketserver.ua
-          - /srv/ticketserver/db:/srv/ticketserver/db
         ports:
           - "80:80"
           - "8000:8000"
         env_file: .env
         restart: always
+
 
 #    nginx:
 #        build: ./nginx
